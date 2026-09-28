@@ -167,7 +167,7 @@ const sendVerificationLink = async (req: Request, id: string) => {
 		console.log(err);
 
 		return new AppError<NodemailerErrorType>(
-			"Error in sending the registration verification email!",
+			`Error in sending the registration verification email!: ${err.response}`,
 			err.responseCode,
 			{
 				code: err.code,
