@@ -1,5 +1,5 @@
 import type { NextFunction, Request, Response } from "express";
-import { UserRole } from "../model/user.model.ts";
+import type { UserRole } from "../model/user.model.ts";
 import { apiResponse } from "../utils/apiResponse.ts";
 
 export const authorize = (...allowedRoles: UserRole[]) => {
