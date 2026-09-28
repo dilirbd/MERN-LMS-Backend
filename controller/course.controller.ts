@@ -1,5 +1,6 @@
 import type { Request, Response } from "express";
-import { PipelineStage, startSession, Types } from "mongoose";
+import { startSession, Types } from "mongoose";
+import type { PipelineStage } from "mongoose";
 import * as z from "zod";
 import { CourseModel } from "../model/course.model.ts";
 import { EnrollmentModel } from "../model/enrollment.model.ts";
