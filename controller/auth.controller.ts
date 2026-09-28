@@ -145,7 +145,10 @@ const loginHandler = asyncHandler(async (req: Request, res: Response) => {
 				path: "/",
 			});
 
-			console.log(`${config.nodeEnv === "prod"} and ${(config.nodeEnv === "prod") ? "none" : "lax"}`);
+			console.log(
+				"SET-COOKIE HEADER:",
+				res.getHeader("Set-Cookie"),
+			);
 
 			const prevSession = await SessionModel.findOne({ user: user._id });
 
