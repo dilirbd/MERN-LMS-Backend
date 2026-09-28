@@ -1,7 +1,7 @@
 import type { Request } from "express";
 import { config } from "../config/envConfig.ts";
 import { AppError, EmailSanitizeError } from "../utils/globalErrorHandler.ts";
-import { nodemailerTransporter } from "../utils/mailerTransporter.ts";
+import { sendGmail } from "../utils/mailerTransporter.ts";
 import { generateTokenPass, generateTokenReg } from "../utils/obfuscationHelper.ts";
 import { emailSanitizer } from "../utils/validationHelper.ts";
 
@@ -27,7 +27,7 @@ const sendVerificationLink = async (req: Request, id: string) => {
 
 		console.log(verificationUrl);
 
-		const info = await nodemailerTransporter.sendMail({
+		const info = await sendGmail({
 			from: config.authUser,
 			to: req.body.email,
 			subject: `Email Verification for DDR LMS`,
@@ -164,10 +164,8 @@ const sendVerificationLink = async (req: Request, id: string) => {
 			response: err.response,
 		});
 
-		console.log(err);
-
 		return new AppError<NodemailerErrorType>(
-			`Error in sending the registration verification email!: ${err.response}`,
+			`Error in sending the registration verification email!`,
 			err.responseCode,
 			{
 				code: err.code,
@@ -191,7 +189,7 @@ const sendReset = async (req: Request, userInfo: SendResetParams) => {
 				if (userInfo.phone) {}
 				// send an OTP via mail to user's email address
 				else {
-					info = await nodemailerTransporter.sendMail({
+					info = await sendGmail({
 						from: config.authUser,
 						to: req.body.email,
 						subject: `Reset Password for DDR LMS`,
@@ -309,7 +307,7 @@ const sendReset = async (req: Request, userInfo: SendResetParams) => {
 			}/reset/${encodedToken.tokenToSend}`;
 
 			console.log(resetUrl);
-			const info = await nodemailerTransporter.sendMail({
+			const info = await sendGmail({
 				from: config.authUser,
 				to: req.body.email,
 				subject: `Reset Password for DDR LMS`,
@@ -437,7 +435,7 @@ const sendReset = async (req: Request, userInfo: SendResetParams) => {
 			const resetUrl = `${req.protocol}://${req.get("host")}${
 				ogUrl.replace(/\?.*?\/+/g, "")
 			}/reset/${encodedToken.tokenToSend}`;
-			const info = await nodemailerTransporter.sendMail({
+			const info = await sendGmail({
 				from: config.authUser,
 				to: req.body.email,
 				subject: `Reset Password for DDR LMS`,
