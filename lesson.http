@@ -1,0 +1,25 @@
+### Get my lessons from this module of this course
+GET {{host}}/api/v1/courses/6ab2d943b1a58d3867d754bf/modules/6ab508b860894d83d85e2470/lessons
+
+### Mark/Unmark (works like a toggle) a lesson as complete
+POST {{host}}/api/v1/courses/6ab2d943b1a58d3867d754bf/modules/6ab67945bf1b2aaad28486bb/lessons/6ab679b6bf1b2aaad28486bc/complete
+
+### Make a new lesson
+POST {{host}}/api/v1/courses/6ab2d943b1a58d3867d754bf/modules/6ab4ab36e6ec1a751f353160/lessons/new-lesson
+Content-Type: application/json
+{
+    "title": "What is memoization?",
+    "description": "Learn about memoization and why need it in react with this module.",
+    "order": 2
+}
+
+### Update a lesson
+PATCH {{host}}/api/v1/courses/6ab2d943b1a58d3867d754bf/modules/6ab4876ad76bb909f00927ce/lessons/6ab570d284331e6a0e075b2d/update-lesson
+Content-Type: application/json
+{
+
+    "order": 10
+}
+
+### Delete a lesson
+DELETE {{host}}/api/v1/courses/6ab2d943b1a58d3867d754bf/modules/6ab4876ad76bb909f00927ce/lessons/6ab64cb4cd402844f487c764/delete-lesson

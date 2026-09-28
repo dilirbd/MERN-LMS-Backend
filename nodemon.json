@@ -1,0 +1,7 @@
+{
+    "ext": "ts,json",
+    "exec": "tsx --env-file=.env ./index.ts",
+    "ignore": [
+        "dist"
+    ]
+}

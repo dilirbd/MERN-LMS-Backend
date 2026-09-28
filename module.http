@@ -1,0 +1,21 @@
+### Get my modules from this course
+GET {{host}}/api/v1/courses/6ab2d943b1a58d3867d754bf/modules
+
+### Make a new module
+POST {{host}}/api/v1/courses/6ab983ac149cc8dbc9a4c97a/modules/new-module
+Content-Type: application/json
+{
+    "title": "Concurrent Rendering",
+    "description": "Learn about concurrent rendering from the ground up with this module.",
+    "order": 1
+}
+
+### Update a module
+PATCH {{host}}/api/v1/courses/6ab983ac149cc8dbc9a4c97a/modules/6ab99e1b3a01f5c4a20aca24/update-module
+Content-Type: application/json
+{
+    "order": 1
+}
+
+### Delete module
+DELETE {{host}}/api/v1/courses/6ab2d943b1a58d3867d754bf/modules/6ab53dcdbd75f1dfd2634672/delete-module

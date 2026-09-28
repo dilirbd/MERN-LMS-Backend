@@ -1,0 +1,41 @@
+
+### Public route - get a list of published courses
+GET {{host}}/api/v1/courses/?search=react&sort=title_asc&&limit=5
+
+### Public route - get details of a particular course using it's id
+GET {{host}}/api/v1/courses/6ab2d943b1a58d3867d754bf
+
+### Get logged in user's courses
+GET {{host}}/api/v1/courses/my-courses?sort=newest
+
+### Get logged in user's course details
+GET {{host}}/api/v1/courses/my-courses/6ab983ac149cc8dbc9a4c97a
+
+### Make a new course
+POST {{host}}/api/v1/courses/my-courses/new-course
+Content-Type: application/json
+{
+    "title": "React Fundamentals",
+    "description": "Learn the fundamentals of React from the ground up with our course.",
+    "thumbnail": "https://pluspng.com/img-png/react-logo-png-img-react-logo-png-react-js-logo-png-transparent-png-1142x1027.png"
+}
+
+### Update course
+PATCH {{host}}/api/v1/courses/my-courses/6ab2d90ab1a58d3867d754be/update-course
+Content-Type: application/json
+{
+    "title": "React Basics",
+    "description": "Learn the basics of React from the ground up with our course.",
+    "thumbnail": "https://pluspng.com/img-png/react-logo-png-img-react-logo-png-react-js-logo-png-transparent-png-1142x1027.png"
+}
+
+### Delete course
+DELETE {{host}}/api/v1/courses/my-courses/6ab2d90ab1a58d3867d754be/delete-course
+
+### Publish course
+PATCH {{host}}/api/v1/courses/my-courses/6ab2d943b1a58d3867d754bf/publish
+
+### Enroll in a course (only for students)
+POST {{host}}/api/v1/courses/6ab2d943b1a58d3867d754bf/enroll
+
+POST {{host}}/api/v1/courses/6ab2d943b1a58d3867d754bf/unenroll

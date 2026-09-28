@@ -1,0 +1,27 @@
+{
+    "typescript": {
+        "indentWidth": 4,
+        "useTabs": true,
+        "semiColons": "always",
+        "nextControlFlowPosition": "nextLine",
+        "trailingCommas": "onlyMultiLine"
+    },
+    "json": {
+        "indentWidth": 4,
+        "useTabs": true
+    },
+    "markdown": {},
+    "toml": {},
+    "includes": [
+        "**/*.{ts,js,json}"
+    ],
+    "excludes": [
+        "**/node_modules",
+        "**/*-lock.json"
+    ],
+    "plugins": [
+        "./node_modules/@dprint/typescript/plugin.wasm",
+        "./node_modules/@dprint/json/plugin.wasm",
+        "./node_modules/@dprint/markdown/plugin.wasm",
+    ]
+}

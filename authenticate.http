@@ -1,0 +1,104 @@
+POST {{host}}/api/v1/auth/register
+Content-Type: application/x-www-form-urlencoded
+{{(()=>{const params = new URLSearchParams();params.append('name', 'john Eon');params.append('password', '1khg2t1R');params.append('email', 'dilirdaiyanbd@gmail.com');params.append('role', 'admin');return params.toString();})()}}
+
+### Register a user
+POST {{host}}/api/v1/auth/register
+Content-Type: application/json
+{
+    "name": "john Eon",
+    "password": "1khg2t1R",
+    "email": "lokhskaki03@gmail.com",
+    "role": "instructor"
+}
+
+### Verify the user
+GET http://localhost:3000/verify-email?token=7XSIBp9YIsA-e111dgBEXSQREvi0sS2QuDz9Z9tfkgCSxmGM4K9U3oWIfj51HHyQXj7enQved78o1H64I4kJbh5ZxL6KNGiq-dVYtEAfAX-vECJ5lQXTtJ1aVXhz0Dou2HGoSeGRGgdpVXyqyx8G-w
+
+### Login with the verified account
+POST {{host}}/api/v1/auth/login
+Content-Type: application/json
+{
+    "email": "disfdsdffd@gmail.com",
+    "password": "1khg2t1R"
+}
+
+### Forgot password of the verified user?
+POST {{host}}/api/v1/auth/login/fp
+Content-Type: application/json
+{
+    "email": "diisfdsdffd@gmail.com"
+}
+
+### Method 1a - Resetting the password by sending an otp to the email
+POST {{host}}/api/v1/auth/login/fp?mailOtp=true
+Content-Type: application/json
+{
+    "email": "diisfdsdffd@gmail.com"
+}
+
+### Method 1b - Entering the received otp and receiving the token needed for the next step
+POST {{host}}/api/v1/auth/login/fp/reset/otp-verify
+Content-Type: application/json
+{
+    "email": "diisfdsdffd@gmail.com",
+    "otp": "lmgjRwQf"
+}
+
+### Method 1c - Setting up a new password with the received token from previous step
+POST {{host}}/api/v1/auth/login/fp/reset/setup/_eeFxC1Q2i1KNiKjeCLVCTYFQPihwTXy1dIT7hQ6PLAZpCtHVU5mivM_VUVEg7tDiB4tefDWKiIUiedImAgDvcEYTNj9jp6KBlpmQLr6PHmmvnU6n-si0HpgTJzwAHiW6b1B-63XXiPgwDfMZmK-i-ko5uD3IYh-O3eYgySM6DznPF_uNLgCFrZUOe06lCkz
+Content-Type: application/json
+{
+    "pass": "kkjhhS21",
+    "repass": "kkjhhS21",
+    "method": "otp"
+}
+
+### Method 2a - Resetting the password by sending a reset link to the mail
+POST {{host}}/api/v1/auth/login/fp?mailLink=true
+Content-Type: application/json
+{
+    "email": "diisfdsdffd@gmail.com"
+}
+
+### Method 2b - Verifying the user and receiving the token needed for the next step
+GET http://localhost:8082/api/v1/auth/login/fp/reset/NSnagKUenVlxRsAfRBpyaUkNC8OCsDxBNdHIaltKnWjkIAZih3u0ihm2rmOtwp_tuJdlJoIUfKZjzV5DcCpJ_-Y86FNuAq05YuqJ6i3LGeGVBYB4cHeeq4iQj3EY6yJY7wXcnz5U--k_NL5eKCmB_UiOcnRn_ln436U7C5me4Ec
+
+### Method 2c - Setting up a new password with the received token from previous step
+POST {{host}}/api/v1/auth/login/fp/reset/setup/3bPEp5YE6M61KYw0RBpyaUkNC8OCsDxBNdHIas_2I7Xc-aKkDBWyNq_aRLr4fHBa1F1M9-2wQA1_mSMD9XYam4Y08mthXnVzATzk4e7rixb5lNVPR5c7S29PpNUKRtQAK__qwMV4sV_lPkT31AgaTeZTQlmMSystNVK2QAYYnlhqh0XwfNxmjWNPrekR8H9U
+Content-Type: application/json
+{
+    "pass": "kkjhhS21e",
+    "repass": "kkjhhS21e"
+}
+
+
+### Login and send the session cookie
+
+### instructor 01
+POST {{host}}/api/v1/auth/login
+Content-Type: application/json
+{
+    "email": "dlqwoqwp@gmail.com",
+    "password": "1234asdF"
+}
+
+### instructor 02
+POST {{host}}/api/v1/auth/login
+Content-Type: application/json
+{
+    "email": "abcd7834rh@gmail.com",
+    "password": "1234Asdf"
+}
+
+### Verify cookies are being sent properly
+GET {{host}}/api/v1/auth/profile
+
+PATCH {{host}}/api/v1/auth/profile/update
+Content-Type: application/json
+{
+    "name": "Instructor 003"
+}
+
+### Logout
+POST {{host}}/api/v1/auth/logout
