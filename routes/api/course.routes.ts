@@ -11,7 +11,7 @@ import {
 	updateCourseHandler,
 } from "../../controller/course.controller.ts";
 import { authenticate, optionalAuthenticate } from "../../middleware/authenticator.middleware.ts";
-import { authorize } from "./../../middleware/authorizer.middleware";
+import { authorize } from "./../../middleware/authorizer.middleware.ts";
 import { dcRateLimit } from "../../middleware/rateLimiter.middleware.ts";
 import { validate, validateQuery } from "../../middleware/validator.middleware.ts";
 import {

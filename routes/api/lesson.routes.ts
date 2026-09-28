@@ -7,7 +7,7 @@ import {
 	updateLessonHandler,
 } from "../../controller/lesson.controller.ts";
 import { authenticate } from "../../middleware/authenticator.middleware.ts";
-import { authorize } from "./../../middleware/authorizer.middleware";
+import { authorize } from "./../../middleware/authorizer.middleware.ts";
 import { dcRateLimit } from "../../middleware/rateLimiter.middleware.ts";
 import { validate } from "../../middleware/validator.middleware.ts";
 import { makeLessonSchema, updateLessonSchema } from "../../utils/validation/lesson.validation.ts";

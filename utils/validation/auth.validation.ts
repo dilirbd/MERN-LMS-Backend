@@ -1,7 +1,7 @@
 import { getName } from "country-list";
 import { getCountries, getCountryCallingCode } from "libphonenumber-js";
 import * as z from "zod";
-import { passwordChecker } from "../validationHelper";
+import { passwordChecker } from "../validationHelper.ts";
 
 const countryCodes = getCountries().map((country) => ({
 	name: getName(country) || country,

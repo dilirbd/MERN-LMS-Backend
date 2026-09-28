@@ -1,5 +1,5 @@
 import ms from "ms";
-import { config } from "../config/envConfig";
+import { config } from "../config/envConfig.ts";
 
 const crypto = await import("node:crypto");
 

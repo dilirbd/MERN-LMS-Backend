@@ -8,7 +8,6 @@ import { ModuleModel } from "./../model/module.model.ts";
 import { ProgressModel } from "../model/progress.model.ts";
 import { apiResponse } from "../utils/apiResponse.ts";
 import { asyncHandler } from "../utils/asyncHandler.ts";
-import { AppError, BasicErrorPayloadType } from "../utils/globalErrorHandler.ts";
 import { getCoursesQuerySchema, getMyCoursesQuerySchema } from "../utils/validation/course.validation.ts";
 
 const getPublicCoursesHandler = asyncHandler(async (req: Request, res: Response) => {
