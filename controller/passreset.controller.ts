@@ -3,7 +3,8 @@ import type { Request, Response } from "express";
 import UserModel from "../model/user.model.ts";
 import { apiResponse } from "../utils/apiResponse.ts";
 import { asyncHandler } from "../utils/asyncHandler.ts";
-import { AppError, BasicErrorPayloadType } from "../utils/globalErrorHandler.ts";
+import { AppError } from "../utils/globalErrorHandler.ts";
+import type { BasicErrorPayloadType } from "../utils/globalErrorHandler.ts";
 import { verifyTokenPass } from "../utils/obfuscationHelper.ts";
 import { emailSanitizer, passwordChecker } from "../utils/validationHelper.ts";
 
