@@ -1,4 +1,4 @@
-import { NextFunction, Request, Response } from "express";
+import type { NextFunction, Request, Response } from "express";
 import { config } from "../config/envConfig.ts";
 import { SessionModel } from "../model/session.model.ts";
 import { UserModel } from "../model/user.model.ts";

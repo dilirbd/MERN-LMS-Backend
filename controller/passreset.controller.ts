@@ -1,5 +1,5 @@
 import bcrypt from "bcryptjs";
-import type { NextFunction, Request, Response } from "express";
+import type { Request, Response } from "express";
 import UserModel from "../model/user.model.ts";
 import { apiResponse } from "../utils/apiResponse.ts";
 import { asyncHandler } from "../utils/asyncHandler.ts";

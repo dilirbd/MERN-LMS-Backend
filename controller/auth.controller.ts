@@ -1,5 +1,5 @@
 import bcrypt from "bcryptjs";
-import { NextFunction, Request, Response } from "express";
+import type { Request, Response } from "express";
 import { Error } from "mongoose";
 import ms from "ms";
 import { config } from "../config/envConfig.ts";

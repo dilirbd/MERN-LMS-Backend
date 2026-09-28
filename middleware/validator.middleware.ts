@@ -1,4 +1,4 @@
-import { NextFunction, Request, Response } from "express";
+import type { NextFunction, Request, Response } from "express";
 import * as z from "zod";
 import { apiResponse } from "../utils/apiResponse.ts";
 
