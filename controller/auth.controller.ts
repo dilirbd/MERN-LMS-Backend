@@ -136,7 +136,6 @@ const loginHandler = asyncHandler(async (req: Request, res: Response) => {
 
 		if (passMatch) {
 			const token = generateSessionToken();
-			console.log("Setting cookies!");
 
 			res.cookie("sessionToken", token, {
 				httpOnly: true,
@@ -146,7 +145,7 @@ const loginHandler = asyncHandler(async (req: Request, res: Response) => {
 				path: "/",
 			});
 
-			console.log("cookies set");
+			console.log(req.cookies);
 
 			const prevSession = await SessionModel.findOne({ user: user._id });
 
