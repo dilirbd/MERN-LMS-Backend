@@ -522,7 +522,7 @@ Successful responses generally follow:
 {
   "success": true,
   "message": "Request successful.",
-  "data": {} | [{},...]
+  "data": {} | [{},]
 }
 ```
 
@@ -554,17 +554,17 @@ Validation errors may include:
 
 # HTTP Status Codes
 
-| Status | Meaning                            |
-| -----: | ---------------------------------- |
-|  `200` | Successful request                 |
-|  `201` | Resource created                   |
-|  `251` | Lesson marked Incomplete           |
-|  `400` | Invalid request / validation error |
-|  `401` | Authentication required            |
-|  `403` | Insufficient permissions           |
-|  `404` | Resource not found                 |
-|  `409` | Duplicate or conflicting resource  |
-|  `500` | Internal server error              |
+| Status | Meaning                                 |
+| -----: | -------------------------------------   |
+|  `200` | Successful request                      |
+|  `201` | Resource created                        |
+|  `251` | Once completed lesson marked incomplete |
+|  `400` | Invalid request / validation error      |
+|  `401` | Authentication required                 |
+|  `403` | Insufficient permissions                |
+|  `404` | Resource not found                      |
+|  `409` | Duplicate or conflicting resource       |
+|  `500` | Internal server error                   |
 
 ---
 
