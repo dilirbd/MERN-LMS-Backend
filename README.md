@@ -473,7 +473,7 @@ Students cannot enroll in draft courses or in the same course more than once.
 
 ---
 
-### Get Enrolled Course
+### Get Enrolled/Owned Course
 
 ```http
 GET /courses/my-courses/:id
@@ -522,7 +522,7 @@ Successful responses generally follow:
 {
   "success": true,
   "message": "Request successful.",
-  "data": {} | [{},]
+  "data": {} | [{},...]
 }
 ```
 
