@@ -58,7 +58,7 @@ https://your-backend.com/api/v0
 | **DELETE** | `/courses/my-courses/:id/delete-course`                  | Yes  | Instructor           | Delete own course                |
 | **PATCH**  | `/courses/my-courses/:id/publish`                        | Yes  | Instructor           | Publish own course               |
 |            |                                                          |      |                      |                                  |
-| **POST**   | `/courses/:cid/modules`                                  | Yes  | Instructor           | Get course modules               |
+| **POST**   | `/courses/:cid/modules`                                  | Yes  | Instructor / Student | Get course modules               |
 | **POST**   | `/courses/:cid/modules/new-module`                       | Yes  | Instructor           | Add a module                     |
 | **PATCH**  | `/courses/:cid/modules/:id/update-module`                | Yes  | Instructor           | Update a module                  |
 | **DELETE** | `/courses/:cid/modules/:id/delete-module`                | Yes  | Instructor           | Delete a module                  |
