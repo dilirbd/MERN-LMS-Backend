@@ -416,6 +416,7 @@ POST /courses/:cid/modules/:mid/lessons/new-lesson
   "description": "An introduction to the Document Object Model.",
   "videoUrl": "https://www.youtube.com/watch?v=example",
   "duration": 10
+  "order": 2
 }
 ```
 
