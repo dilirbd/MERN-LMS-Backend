@@ -624,13 +624,13 @@ npm run dev
 The API will be available at:
 
 ```text
-http://localhost:port
+http://localhost:PORT
 ```
 
 API endpoints are available under:
 
 ```text
-http://localhost:port/api/v0
+http://localhost:PORT/api/v0
 ```
 
 The API can be tested using tools such as **httpyac** and **Postman**. The `.http` files in this repository are sample API testing files for **httpyac** that were used during development.
@@ -661,7 +661,7 @@ The backend uses CORS to allow requests from the configured frontend origin and 
 
 The API intentionally focuses on the core LMS workflow.
 
-The following features are outside the current scope:
+The following features are outside the current scope for now:
 
 * Payments
 * Quizzes
