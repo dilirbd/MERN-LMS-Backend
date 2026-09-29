@@ -301,7 +301,7 @@ published
 
 Returns published courses enrolled into by the authenticated student.
 
-SUpports:
+Supports:
 
 ```text
 search
