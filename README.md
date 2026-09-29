@@ -603,7 +603,7 @@ Module
 
 # Environment Variables
 
-Make a `.env` file in the backend root and follow .env.sample to set the variables.
+Make a `.env` file in the backend root and follow the provided `.env.sample` file to set the variables.
 
 ---
 
