@@ -1,6 +1,6 @@
 POST {{host}}/api/v1/auth/register
 Content-Type: application/x-www-form-urlencoded
-{{(()=>{const params = new URLSearchParams();params.append('name', 'john Eon');params.append('password', '1khg2t1R');params.append('email', 'dilirdaiyanbd@gmail.com');params.append('role', 'admin');return params.toString();})()}}
+{{(()=>{const params = new URLSearchParams();params.append('name', 'john Eon');params.append('password', '1khg2t1R');params.append('email', 'jkladskak@gmail.com');params.append('role', 'admin');return params.toString();})()}}
 
 ### Register a user
 POST {{host}}/api/v1/auth/register
