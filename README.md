@@ -369,6 +369,7 @@ POST /courses/:cid/modules/new-module
 {
   "title": "Introduction to React",
   "description": "React fundamentals."
+  "order": 1
 }
 ```
 
