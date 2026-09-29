@@ -624,16 +624,16 @@ npm run dev
 The API will be available at:
 
 ```text
-http://localhost:4000
+http://localhost:port
 ```
 
 API endpoints are available under:
 
 ```text
-http://localhost:4000/api/v0
+http://localhost:port/api/v0
 ```
 
-The API can be tested using tools such as **httpyac** and **Postman**. The .http files in this repository are sample api testing files for **httpyac** that were used during development.
+The API can be tested using tools such as **httpyac** and **Postman**. The `.http` files in this repository are sample API testing files for **httpyac** that were used during development.
 
 ---
 
